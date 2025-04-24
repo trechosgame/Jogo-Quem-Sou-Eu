@@ -1,0 +1,489 @@
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face{
+   font-family: DS_DIGITAL;
+   src: url(../fonts/DS-DIGI.TTF);
+}
+*{
+   margin: 0px;
+   padding: 0px;
+   text-decoration: none;
+   box-sizing: border-box; 
+}
+
+body{
+   background-image: url("bg.jpg");
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   background-attachment: fixed;
+   min-height: 100vh;
+   height: 90vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   overflow: hidden;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.som #reproduzir {
+   display: flex;
+   justify-content: center;
+   padding: 5;
+   margin-bottom: 10px;
+   background-color: #00ffdd;
+   color:#fff;
+   border: 1px solid #9c9c9c;
+   border-radius: 5px;
+   box-shadow: 0px 2px 4px #888888;
+   font-family: 'Luckiest Guy', cursive;
+   text-align: center;
+   letter-spacing: 0.2rem;
+}
+
+.placar{
+   display: flex;
+   justify-content: center;
+   padding: 5;
+   margin-bottom: 10px;
+   background-color: #00ffdd;
+   color:#fff;
+   border: 1px solid #9c9c9c;
+   border-radius: 5px;
+   box-shadow: 0px 2px 4px #888888;
+   font-family: 'Luckiest Guy', cursive;
+   text-align: center;
+   letter-spacing: 0.2rem;
+}
+.placar #vitorias, .placar #derrotas{
+   width: 270px;
+   background-color: #000;
+   margin: 2px;
+   border: 2px solid #716c6c;
+   border-radius: 5px;
+   font-size: 40px;
+   font-family: DS_DIGITAL;
+}
+.placar #vitorias{
+   color: #02f53a;
+}
+.placar #derrotas{
+   color: #ff0000;
+}
+.borda-imagem{
+   width: 600px;
+   height: 425px;
+   margin: 20px;
+   margin-top: 0;
+   border:10px solid #00ffdd;
+   border-radius: 40px;
+}
+.borda-imagem #imagem{
+   width:100%;
+   height:100%;
+   border: 10px solid #00ffdd;
+   border-radius: 40px;
+   box-shadow: 0px 2px 4px #888888;
+}
+.progresso{
+   display: flex;
+   width: 500px;
+   height: 30px;
+   margin: 10px;
+   background-color: transparent;
+   border-radius: 10px;
+}
+.progresso div{
+   width: 20%;
+   height: 30px;
+   background-color: transparent;
+   margin-right:1px;
+}
+.progresso #progresso-01{
+   margin-left: 0;
+   border-radius: 10px 0 0 10px;
+
+}
+.progresso #progresso-05{
+   margin-right: 0;
+   border-radius: 0 10px 10px 0;
+}
+form{
+   width: 600px;  
+}
+.input-container{
+   position: relative;
+   margin-top: 30px; 
+}
+.input-container label{
+   position: absolute;
+   top: 20px;
+   left:0px;
+   font-family: 'Poppins', sans-serif;
+   font-size:16px;
+   text-align: center;
+   color: #000;
+   transition: all 0.5s ease-in-out;
+}
+.input-container input{
+   border:0;
+   border-bottom:1px solid #9c9c9c;
+   background: #fff;
+   width:100%;
+   padding: 8px 0 5px 0;
+   font-size: 32px;
+   color: #000;
+   text-align: center;
+   text-transform: uppercase;
+}
+.input-container input:focus{
+   border: none;
+   outline: none;
+   border-bottom: 1px solid #00ffdd;
+}
+.input-container input:focus ~ label,
+.input-container input:valid ~label{
+   top: 12px;
+   font-size: 12px;
+   color: transparent;
+}
+#jogarNovamente button{
+   background: #00ffdd;
+   width: 430px;
+   margin-top: 10px;
+   padding: 3px;
+   border-radius: 10px;
+   border: 2px solid dimgray;
+   box-shadow: 0 2px 4px #888888;
+   font-family:"Luckiest Guy", cursive;
+   font-size: 1.7em;
+   cursor: pointer;   
+}
+#jogarNovamente button:hover{
+   font-size: 1.75em;
+   background-color: #84e712;
+}
+footer{
+   display: flex;
+   position: absolute;
+   bottom: 10px;
+   color: white;
+   font-family: 'Poppins', sans-serif;
+   font-size: 0.8em;
+}
+footer a{
+   margin: 0 5px;
+   color: white;
+   transition: transform .2s;
+}
+footer a:hover{
+   color:#00ffdd;
+   transform: scale(1.5);
+}
+.modal-container{
+    display:none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.modal{
+   position: relative;
+   background-color:#fefefe;
+   border: 10px solid #000;
+   border-radius: 5px;
+   text-align: center;
+   margin: auto;
+   padding: 0;
+   width: 40%;
+   box-shadow: 0 4px 8px 0 rgba(0,0,0,0,2), 0 6px 20px 0 rgba(0,0,0,0 0.19);
+   -webkit-animation-name: animacao;
+   -webkit-animation-duration: 0.4s;
+   animation-name: animacao;
+   animation-duration: 0.4s;
+}
+@-webkit-keyframes animacao{
+   from{top: -300px; opacity:0}
+   to{top:0; opacity:1}
+}
+@keyframes animacao{
+   from{top: -300px; opacity:0}
+   top{top:0; opacity:1}
+}
+.close{
+   color: white;
+   float: right;
+   font-size: 2rem;
+   font-weight: bold;
+   font-family: 'Poppins', 'sans-serif';
+}
+.close:hover, .close:focus{
+   color: #000;
+   text-decoration: none;
+   cursor: pointer;
+}
+.modal-header{
+   padding:2px 16px;
+   background-color: #00ffdd;
+   font-family: 'Luckiest Guy', cursive;
+   letter-spacing: 0.3em;
+   font-size:1.3rem;
+   color: #000;
+}
+.modal-body{
+   padding:2px 16px;
+   font-family: 'Poppins', 'sans-serif';
+}
+@media (max-width: 320px){
+     h1 {
+        font-size: 2.0em;
+    }
+
+    .placar #vitorias, .placar #derrotas{
+        width: 120px;
+    }
+
+    .borda-imagem{
+        width: 300px;
+        height: 225px;
+    }
+
+    .borda-imagem #imagem{
+        background-size: 300px;
+    }
+
+    .progresso{
+        width: 260px;
+        height: 20px;
+    }
+
+    .progresso div{
+        height: 20px;
+    }
+    form{
+        width:100%;
+    }
+
+    .input-container { 
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .input-container input{ 
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .input-container label{
+        top:10px;
+        padding-left: 15px;
+        font-size: 0.5em;
+    }
+
+    .input-container input:focus ~ label, 
+    .input-container input:valid ~ label{
+        top:-12px;
+        font-size:6px;  
+        color:#9c9c9c;
+    }
+
+    #jogarNovamente button{
+        width: 270px;
+    }
+
+    .modal {
+        width: 90%;
+    } 
+}
+
+@media (min-width: 321px) and (max-width: 375px){
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .placar #vitorias, .placar #derrotas{
+        width: 140px;
+    }
+
+    .borda-imagem{
+        width: 320px;
+        height: 235px;
+    }
+
+    .borda-imagem #imagem{
+        background-size: 320px;
+    }
+
+    .progresso{
+        width: 280px;
+        height: 25px;
+    }
+
+    .progresso div{
+        height: 25px;
+    }
+    form{
+        width:100%;
+    }
+
+    .input-container { 
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .input-container input{ 
+        font-size: 18px;
+        width: 90%;
+    }
+
+    .input-container label{
+        top: 10px;
+        padding-left: 20px;
+        font-size: 0.6em;
+    }
+
+    .input-container input:focus ~ label, 
+    .input-container input:valid ~ label{
+        top:-12px;
+        font-size:8px;  
+        color:#9c9c9c;
+    }
+
+    #jogarNovamente button{
+        width: 300px;
+    }
+
+    .modal {
+        width: 90%;
+    }
+}
+
+@media (min-width: 376px) and (max-width: 425px){
+    h1 {
+        font-size: 3em;
+    }
+
+    .placar #vitorias, .placar #derrotas{
+        width: 160px;
+    }
+
+    .borda-imagem{
+        width: 380px;
+        height: 280px;
+    }
+
+    .borda-imagem #imagem{
+        background-size: 380px;
+    }
+
+    .progresso{
+        width: 280px;
+        height: 25px;
+    }
+
+    .progresso div{
+        height: 25px;
+    }
+    form{
+        width:100%;
+    }
+
+    .input-container { 
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .input-container input{ 
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .input-container label{
+        top:10px;
+        padding-left: 20px;
+        font-size: 0.7em;
+    }
+
+    .input-container input:focus ~ label, 
+    .input-container input:valid ~ label{
+        top:-12px;
+        font-size:10px; 
+        color:#9c9c9c;
+    }
+
+    #jogarNovamente button{
+        width: 350px;
+    }
+
+    .modal {
+        width: 90%;
+    }
+}
+
+@media (min-width: 426px) and (max-width: 665px){
+
+    h1 {
+        font-size: 4.4em;
+    }
+
+    .placar #vitorias, .placar #derrotas{
+        width: 200px;
+    }
+
+    .borda-imagem{
+        width: 500px;
+        height: 360px;
+    }
+
+    .borda-imagem #imagem{
+        background-size: 500px;
+    }
+
+    .progresso{
+        width: 450px;
+        height: 30px;
+    }
+
+    .progresso div{
+        height: 30px;
+    }
+    form{
+        width:100%;
+    }
+
+    .input-container { 
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .input-container input{ 
+        font-size: 25px;
+        width: 90%;
+    }
+
+    .input-container label{
+        top:10px;
+        padding-left: 30px;
+    }
+
+    #jogarNovamente button{
+        width: 400px;
+    }
+
+    .modal {
+        width: 90%;
+    }
+    
+}
