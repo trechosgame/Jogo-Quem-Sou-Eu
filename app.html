@@ -4,13 +4,13 @@
   <title> JOGO QUEM SOU EU ? </title>
   <meta charset="UTF-8"> 
   <meta http-equiv="X-UA-Compatible" contente="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.0/dist/confetti.browser.min.js"></script>  
   <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="CSS/style.css"/> 
 </head>
 <body>
   <div class="container">
-   
   <div class="placar">
     <div>
       <p>VITÓRIAS</p>
@@ -20,6 +20,20 @@
       <p>DERROTAS</p>
       <div id="derrotas">0</div>
     </div>
+
+   <div class="som">
+    <div>
+      <button onclick="reproduzirAudio()">>></button>
+      <audio id="meuAudio" src="./audio/meuAudio.mp3"></audio>
+    </div>
+
+    <div>
+      <button id="" onclick="pararAudio()">||</button>
+      <audio src="meuAudio.mp3" autoplay></audio>
+    </div>
+  </div>
+
+
   </div>
 
   <div class="borda-imagem">
@@ -53,16 +67,21 @@
 </div>
 </div>
   <footer>
-  &copy; TrechosGame -
-  <a href="https://github.com/trechosgame/" target="_blank"><i class="ph ph-github-logo"></i></a>
-  <a href="https://www.instagram.com/trechosgame/" target="_blank"><i class="ph ph-instagram-logo"></i></a>
-  <a href="https://www.linkedin.com/in/debora-inocencio/" target="_blank"><i class="ph ph-linkedin-logo"></i></a>
-  <a href="https://www.youtube.com/channel/UCfEsOEx_t6hiIms8HzttxOw/featured" target="_blank"><i class="ph ph-youtube-logo"></i></a>
+
+    <div class="footer-info">
+      <p>
+        &copy; <script>document.write(new Date().getFullYear())</script>
+        <span id="displayYear"></span>
+        <a href="https://www.instagram.com/trechosgame">TrechosGame</a><br><br>
+      </p>
+    </div>
+    
 </footer>
 </div>
  
 <script src="https://unpkg.com/@phosphor-icons/web"></script>
 <script src="./js/script.js"></script>
+<canvas id="confetti-canvas" width="100%" height="100%"></canvas>
 </body> 
 </html>
 
