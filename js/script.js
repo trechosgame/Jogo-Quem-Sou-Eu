@@ -117,7 +117,7 @@ const listPersonagens = [
   }),
  (personagem030 = {
     nome: "BEBÊ",
-    imagem:"./img/BEBÊ.jpg",
+    imagem:"./img/BEBE.jpg",
   }),
   (personagem031 = {
     nome: "BELICHE",
@@ -509,7 +509,7 @@ const listPersonagens = [
   }),
  (personagem126 = {
     nome: "FAMÍLIA",
-    imagem: "./img/FADA.jpg",
+    imagem: "./img/FAMILIA.jpg",
   }),
  (personagem127 = {
     nome: "FANTASIA",
@@ -769,11 +769,11 @@ const listPersonagens = [
   }),
  (personagem191 = {
     nome: "GEMÊAS",
-    imagem: "./img/GEMÊAS.jpg",
+    imagem: "./img/GEMEAS.jpg",
   }),
  (personagem192 = {
-    nome: "GEMÊAS",
-    imagem: "./img/GEMÊAS.jpg",
+    nome: "GENGIBRE",
+    imagem: "./img/GENGIBRE.jpg",
   }),
  (personagem193 = {
     nome: "GÊNIO",
@@ -1185,7 +1185,7 @@ const listPersonagens = [
   }),
  (personagem279 = {
     nome: "MAÇÃ",
-    imagem: "./img/LEGUMES.jpg",
+    imagem: "./img/MACA.jpg",
   }),
  (personagem280 = {
     nome: "MACACO",
@@ -1473,18 +1473,16 @@ let finalizouPartida = false;
 SorteiaImagem();
 function SorteiaImagem() {
   const index = parseInt(Math.random() * listPersonagens.length);
-
   nomePersonagem = listPersonagens[index].nome;
   imagemPersonagem = listPersonagens[index].imagem;
-
   console.log(nomePersonagem);
   console.log(imagemPersonagem);
-
   document.getElementById("imagem").style.backgroundImage =
     "url(" + imagemPersonagem + ")";
 
   //fesfocar a imagem
   desfocarImagem(tentativas);
+  
 }
 
 function desfocarImagem(valoDesfoque) {
@@ -1531,6 +1529,10 @@ if (finalizouPartida == false) {
           mudaStatusInput(true);
           finalizouPartida = true;
           personalizaModal("vitoria");
+          confetti({
+            particleCount: 1000,
+            spread: 180
+          });
           habilitaBotaoJogarNovamente();
         } else { // se entrar aqui é porque ainda esta tentando acertar
           tentativas--;
@@ -1572,6 +1574,16 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+function reproduzirAudio() {
+  const audio = document.getElementById('meuAudio');
+  audio.play();
+}
+
+function pararAudio() {
+  const audio = document.getElementById('meuAudio');
+  audio.pause();
+}
 
 function personalizaModal(alerta) {
   const modalMensagem = document.getElementById("modal-mensagem");
@@ -1630,6 +1642,13 @@ document.querySelector("#btnJogarNovamente").addEventListener("click", function(
   finalizouPartida = false;
   tentativas = 5;
   SorteiaImagem();
+
+  if(finalizouPartida === true){
+    confetti();
+  }
+
+  
+  
   desfocarImagem(tentativas);
   mudaStatusInput(false);
   document.getElementById("resposta").value = "";
@@ -1638,6 +1657,8 @@ document.querySelector("#btnJogarNovamente").addEventListener("click", function(
   document.querySelector("#btnJogarNovamente").style.display = "none";
   document.querySelector(".borda-imagem").style.border = "10px solid #00ffdd"
 });
+
+
 
 function mudaStatusInput(condicao){
   document.getElementById("resposta").disabled = condicao;
