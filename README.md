@@ -12,7 +12,7 @@ Código Fonte by @AgnaldoGuimaraes
 
 <img src="005.png" width="500px" alt="Jogo Quem Sou Eu">
 
-# Código Fonte 
+# Vídeos do Jogo Quem Sou Código :: @AgnaldoGuimaraes
 - 1 https://www.youtube.com/watch?v=0F0bsrV9lMY&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_fUvT&index=1
 #
 - 2 https://www.youtube.com/watch?v=PGYjqE7BeEQ&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_fUvT&index=2
@@ -64,12 +64,17 @@ https://www.youtube.com/watch?v=2QMb8__rZmc&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_f
 #
 - 25 https://www.youtube.com/watch?v=euplbcuvdhs&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_fUvT&index=25
 
+# Vídeo Agregando confetti cuando jugador completa (Adicionar confete com pouquissima linha em javascript):
+- https://www.youtube.com/watch?v=7648RPcWh8k
+  
+# Vídeo Sounds and Music in JavaScript games (Adicionar trilha sonora,com efeito loopi em javascript):
+- https://www.youtube.com/watch?v=UQA5jG-yh78
+
 # Color Palette:
  - https://mycolor.space
 
 # Editor de Imagens Online:
--
-https://www.resizepixel.com/pt/edit
+-https://www.resizepixel.com/pt/edit
 
 # Imagens:
 - https://www.freepik.com/author/brgfx
