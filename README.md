@@ -69,9 +69,12 @@ https://www.youtube.com/watch?v=2QMb8__rZmc&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_f
   
 # Vídeo Sounds and Music in JavaScript games (Adicionar trilha sonora,com efeito loopi em javascript):
 - https://www.youtube.com/watch?v=UQA5jG-yh78
-
+  
 # Color Palette:
  - https://mycolor.space
+ - 
+# Conversor de Imagens:
+ - https://convertio.co/pt/
 
 # Editor de Imagens Online:
 -https://www.resizepixel.com/pt/edit
