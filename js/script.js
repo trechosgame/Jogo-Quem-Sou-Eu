@@ -81,7 +81,7 @@ const listPersonagens = [
   }),
   (personagem021 = {
     nome: "BARATA",
-    imagem:"./img/BARBEIRO.jpg",
+    imagem:"./img/BARATA.jpg",
   }),
   (personagem022 = {
     nome: "BARBEIRO",
@@ -160,7 +160,7 @@ const listPersonagens = [
     imagem:"./img/BINOCULO.jpg",
   }),
   (personagem041 = {
-    nome: "BIQUINI",
+    nome: "BIQUÍNI",
     imagem: "./img/BIQUINI.jpg",
   }),
  (personagem042 = {
@@ -248,7 +248,7 @@ const listPersonagens = [
     imagem:"./img/BURRO.jpg",
   }),
   (personagem063 = {
-    nome: "BUSSULA",
+    nome: "BÚSSULA",
     imagem: "./img/BUSSULA.jpg",
   }),
  (personagem064 = {
@@ -324,7 +324,7 @@ const listPersonagens = [
     imagem:"./img/CARANGUEJO.jpg",
   }),
   (personagem080 = {
-    nome: "CARNEIROO",
+    nome: "CARNEIRO",
     imagem:"./img/CARNEIRO.jpg",
   }),
   (personagem081 = {
@@ -864,7 +864,7 @@ const listPersonagens = [
     imagem: "./img/HELICOPTERO.jpg",
   }),
  (personagem215 = {
-    nome: "HELLO KITTY",
+    nome: "HELLO-KITTY",
     imagem: "./img/HELLO-KITTY.jpg",
   }),
  (personagem216 = {
@@ -1149,7 +1149,7 @@ const listPersonagens = [
   }),
  (personagem286 = {
     nome: "LIBÉLULA",
-    imagem: "./img/LEGUMES.jpg",
+    imagem: "./img/LIBELULA.jpg",
   }),
  (personagem287 = {
     nome: "LIMONADA",
@@ -1469,6 +1469,9 @@ let resposta;
 let erros = 0;
 let acertos = 0;
 let finalizouPartida = false;
+//1ª Parte Começo Audio infinito
+let bgm = new Audio("./audio/meuAudio.mp3");
+//1ª Parte Fim Audio infinto
 
 SorteiaImagem();
 function SorteiaImagem() {
@@ -1517,7 +1520,7 @@ if (finalizouPartida == false) {
   if (e.key === "Enter") {
     e.preventDefault();
     resposta = document.querySelector("#resposta").value.toUpperCase();
-    if (resposta.length < 3 || !resposta.trim() || resposta == undefined) {
+    if (resposta.length < 3 || !resposta.trim() || resposta == undefined) { 
       personalizaModal("nomeInvalido");
       document.getElementById("resposta").value = "";
     } else {
@@ -1529,6 +1532,8 @@ if (finalizouPartida == false) {
           mudaStatusInput(true);
           finalizouPartida = true;
           personalizaModal("vitoria");
+          bgm.currentTime = 0;
+          bgm.loop = true;
           confetti({
             particleCount: 1000,
             spread: 180
@@ -1574,6 +1579,17 @@ window.onclick = function (event) {
     modal.style.display = "none";
   }
 };
+
+function reproduzirTrilhaSonora() {
+  const bgm = document.getElementById('meuAudio');  
+  bgm.play();  
+}
+
+function pararTrilhaSonora(){
+  const bgm = document.getElementById('meuAudio');
+  bgm.pause();
+  
+}
 
 function reproduzirAudio() {
   const audio = document.getElementById('meuAudio');
@@ -1642,13 +1658,10 @@ document.querySelector("#btnJogarNovamente").addEventListener("click", function(
   finalizouPartida = false;
   tentativas = 5;
   SorteiaImagem();
-
   if(finalizouPartida === true){
     confetti();
   }
-
-  
-  
+  reproduzirTrilhaSonora();
   desfocarImagem(tentativas);
   mudaStatusInput(false);
   document.getElementById("resposta").value = "";
@@ -1657,8 +1670,6 @@ document.querySelector("#btnJogarNovamente").addEventListener("click", function(
   document.querySelector("#btnJogarNovamente").style.display = "none";
   document.querySelector(".borda-imagem").style.border = "10px solid #00ffdd"
 });
-
-
 
 function mudaStatusInput(condicao){
   document.getElementById("resposta").disabled = condicao;
