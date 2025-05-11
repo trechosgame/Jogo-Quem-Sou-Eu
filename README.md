@@ -2,16 +2,6 @@
 Desenvolvido em HTML, CSS E JAVASCRIPT
 Código Fonte by @AgnaldoGuimaraes
 
-<img src="001.png" width="500px" alt="Jogo Quem Sou Eu">
-
-<img src="002.png" width="500px" alt="Jogo Quem Sou Eu">
-
-<img src="003.png" width="500px" alt="Jogo Quem Sou Eu">
-
-<img src="004.png" width="500px" alt="Jogo Quem Sou Eu">
-
-<img src="005.png" width="500px" alt="Jogo Quem Sou Eu">
-
 # Vídeos do Jogo Quem Sou Código :: @AgnaldoGuimaraes
 - 1 https://www.youtube.com/watch?v=0F0bsrV9lMY&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_fUvT&index=1
 #
