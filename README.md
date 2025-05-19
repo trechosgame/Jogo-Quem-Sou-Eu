@@ -1,6 +1,28 @@
 # Jogo-Quem-Sou-Eu
-Desenvolvido em HTML, CSS E JAVASCRIPT
-Código Fonte by @AgnaldoGuimaraes
+Desenvolvimento :
+- Criado pelo engenheiro da computação Agnaldo Guimarães
+- Adaptado por Débora Inocêncio, bacharel em Sistemas de Informação
+- Jogo de alfabetização, desafiador que testa sua habilidade em adivinhar a identidade de ilustrações por trás de imagens borradas.
+- Desenvolvido com 19.3% de variáveis CSS
+- 76.0% de práticas JavaScript
+- 4.7% de elementos
+
+Objetivo e Jogabilidade :
+- Adivinhar a identidade da ilustração por trás da imagem borrada
+- 5 tentativas para acertar
+- A cada tentativa, a imagem fica mais clara
+- Placar de pontuação para avaliar erros e acertos
+
+
+Conteúdo Educacional :
+- Mais de 300 ilustrações embasadas e sorteadas aleatoriamente
+- Ilustrações baseadas em fichas de leitura aplicadas por pedagogos em redes públicas e privadas de ensino fundamental no Brasil
+- Foco em sílabas simples e complexas
+
+Recursos :
+- Confetes são exibidos automaticamente após cada ilustração adivinhada corretamente
+- Placar de pontuação para acompanhar o progresso
+
 
 # Vídeos do Jogo Quem Sou Código :: @AgnaldoGuimaraes
 - 1 https://www.youtube.com/watch?v=0F0bsrV9lMY&list=PLUPt90PJkVdVrgAS5lqcD_sqKmZY_fUvT&index=1
