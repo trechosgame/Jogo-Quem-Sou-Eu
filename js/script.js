@@ -1493,19 +1493,19 @@ function desfocarImagem(valoDesfoque) {
 
   switch (valoDesfoque) {
     case 5:
-      imagem.style.filter = "blur(40px)";
-      break;
-    case 4:
-      imagem.style.filter = "blur(30px)";
-      break;
-    case 3:
-      imagem.style.filter = "blur(20px)";
-      break;
-    case 2:
       imagem.style.filter = "blur(17px)";
       break;
-    case 1:
+    case 4:
+      imagem.style.filter = "blur(16px)";
+      break;
+    case 3:
+      imagem.style.filter = "blur(15px)";
+      break;
+    case 2:
       imagem.style.filter = "blur(14px)";
+      break;
+    case 1:
+      imagem.style.filter = "blur(13px)";
       break;
     case 0:
       imagem.style.filter = "blur(0)";
