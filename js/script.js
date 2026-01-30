@@ -864,7 +864,7 @@ const listPersonagens = [
     imagem: "./img/HELICOPTERO.jpg",
   }),
  (personagem215 = {
-    nome: "HELLO-KITTY",
+    nome: "HELLO - KITTY",
     imagem: "./img/HELLO-KITTY.jpg",
   }),
  (personagem216 = {
@@ -1493,19 +1493,19 @@ function desfocarImagem(valoDesfoque) {
 
   switch (valoDesfoque) {
     case 5:
-      imagem.style.filter = "blur(17px)";
+      imagem.style.filter = "blur(10px)";
       break;
     case 4:
-      imagem.style.filter = "blur(16px)";
+      imagem.style.filter = "blur(9px)";
       break;
     case 3:
-      imagem.style.filter = "blur(15px)";
+      imagem.style.filter = "blur(8px)";
       break;
     case 2:
-      imagem.style.filter = "blur(14px)";
+      imagem.style.filter = "blur(7px)";
       break;
     case 1:
-      imagem.style.filter = "blur(13px)";
+      imagem.style.filter = "blur(6px)";
       break;
     case 0:
       imagem.style.filter = "blur(0)";
